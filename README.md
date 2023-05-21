@@ -20,13 +20,14 @@ IaC to provision multiple VMs in AWS, setup ASG with Load Balancer to scale load
 
 ## Terraform
 
-| Command  | Desc                                                                                                                                                                                                          |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| init     | initialize a working directory containing Terraform configuration files. It scans the code for references to providers and downloads the required providers from the Terraform Registry.                      |
-| plan     | used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files. |
-| apply    | provision infrastructure based on the Terraform configuration                                                                                                                                                 |
-| destroy  | destroy provisioned infrastructure                                                                                                                                                                            |
-| validate | check if HCL syntax is valid on configuration files                                                                                                                                                           |
+| Command            | Desc                                                                                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| init               | initialize a working directory containing Terraform configuration files. It scans the code for references to providers and downloads the required providers from the Terraform Registry.                      |
+| plan               | used to create an execution plan. Terraform performs a refresh, unless explicitly disabled, and then determines what actions are necessary to achieve the desired state specified in the configuration files. |
+| apply              | provision infrastructure based on the Terraform configuration                                                                                                                                                 |
+| destroy            | destroy provisioned infrastructure                                                                                                                                                                            |
+| validate           | check if HCL syntax is valid on configuration files                                                                                                                                                           |
+| output { `value` } | get Terraform output for specific value                                                                                                                                                                       |
 
 For deploying a server, we could use a tool like HashiCorp Packer to build a custom EC2 image with all the required software installed. However
 
